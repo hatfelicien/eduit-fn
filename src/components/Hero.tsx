@@ -12,7 +12,7 @@ const Hero = () => {
       <Header />
       <div className="bg-gray-100 w-full md:w-[90%] mx-auto flex flex-col gap-10 p-10">
         <h1 className="text-xl md:text-3xl font-bold italic">
-          Education is the most powerful weapon which you can use to change the
+          Education is the most powerful weapon that you can use to change the
           world.
         </h1>
         <button
