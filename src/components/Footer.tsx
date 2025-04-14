@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <footer className="bg-[#060b2e] p-10 flex flex-col md:flex-row items-start md:items-center md:justify-between">
+    <footer className="bg-[#060b2e] p-5 md:p-10 flex flex-col md:flex-row items-start md:items-center md:justify-between">
       <section className="text-white">
         <h1 className="font-semibold text-xl my-3">About</h1>
         <ul>
