@@ -4,7 +4,7 @@ import Header from "./Header"
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[550px] flex flex-col justify-between p-10 overflow-hidden">
+    <section className="relative min-h-[600px] flex flex-col justify-between p-10 md:pt-0 overflow-hidden">
       <img
         src={HeroImg}
         className="absolute inset-0 w-full h-full -z-10 object-cover"

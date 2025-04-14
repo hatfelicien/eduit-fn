@@ -3,7 +3,7 @@ import HeroImg from "../assets/Images/About-img.jpeg"
 
 const AboutUs = () => {
   return (
-    <section className="p-10">
+    <section className="p-10" id="about">
       <h1 className="text-3xl text-center pb-10">About Us</h1>
       <div className="flex flex-col items-center md:flex-row gap-5">
         <aside className="flex-1">

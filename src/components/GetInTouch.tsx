@@ -8,7 +8,7 @@ const GetInTouch = () => {
     <section className="px-10 pb-20 relative overflow-hidden">
       <img
         src={HeroImg}
-        className="hidden md:block md:absolute md:top-0 md:left-0 md:object-cover md:-z-10"
+        className="absolute inset-0 w-full h-full -z-10 object-cover"
       />
       <h1 className="text-5xl text-center my-10">Get In Touch</h1>
 
