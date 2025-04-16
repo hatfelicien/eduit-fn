@@ -41,7 +41,7 @@ const Footer = () => {
           />
           <button
             type="submit"
-            className="bg-white py-2 px-5 mx-2 cursor-pointer hover:opacity-70 duration-300 
+            className="bg-white py-2 px-5 mx-2 font-semibold cursor-pointer hover:opacity-70 duration-300 
                             focus:border focus:border-white text-[#060b2e]"
           >
             Subscribe
