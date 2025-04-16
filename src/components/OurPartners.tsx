@@ -8,7 +8,7 @@ import NesaImg from "../assets//Images/Marquee/Nesa.png"
 
 const OurPartners = () => {
   return (
-    <section className="p-5">
+    <section className="py-5">
       <h1 className="text-3xl text-center pb-10">Our Partners</h1>
       <div className="py-10">
         <Marquee

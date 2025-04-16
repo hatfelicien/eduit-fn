@@ -5,8 +5,9 @@ import { IoCloseOutline } from "react-icons/io5"
 import { Link } from "react-scroll"
 import LoginButton from "./LoginButton"
 import { useEffect, useState } from "react"
+import Icon from "./Icon"
 
-const Header = () => {
+const Header = ({ isAtLoginPage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
@@ -30,9 +31,7 @@ const Header = () => {
     <header className={`flex items-center justify-between md:pt-5`}>
       <nav className="h-full w-full">
         <nav className="w-full flex items-center justify-between">
-          <a href="#" className="text-4xl md:text-5xl font-bold text-white">
-            EduIT
-          </a>
+          <Icon />
 
           <ul className="hidden md:flex items-center justify-center gap-5 text-sm">
             <li className={`${linkStyle}`}>
@@ -41,7 +40,7 @@ const Header = () => {
               </Link>
             </li>
             <li className={`${linkStyle}`}>
-              <Link to="about" smooth={true} duration={500}>
+              <Link to="about" smooth={true} duration={1000}>
                 About
               </Link>
             </li>
@@ -58,9 +57,9 @@ const Header = () => {
           </ul>
 
           <FaBars
-            className={` ${
-              isMenuOpen ? "hidden transition-all" : "block"
-            } block md:hidden text-[#060b2e] text-3xl hover:text-white duration-500 cursor-pointer`}
+            className={` ${isMenuOpen ? "hidden transition-all" : "block"} ${
+              isAtLoginPage ? "text-white hover:scale-130" : "text-[#060b2e]"
+            } block md:hidden text-3xl hover:text-white duration-500 cursor-pointer`}
             onClick={() => {
               setIsMenuOpen((prev) => !prev)
             }}
@@ -77,7 +76,9 @@ const Header = () => {
           } fixed top-0 right-0 w-[50%] max-w-[350px] h-full bg-black/50 flex md:hidden duration-700 flex-col items-center text-sm pt-20`}
         >
           <IoCloseOutline
-            className="text-[#060b2e] text-5xl absolute top-3 right-3 hover:text-white duration-500 cursor-pointer"
+            className={`${
+              isAtLoginPage ? "text-white hover:scale-130" : "text-[#060b2e]"
+            } text-5xl absolute top-3 right-3 hover:text-white duration-500 cursor-pointer`}
             onClick={() => {
               setIsMenuOpen(false)
             }}
@@ -97,7 +98,7 @@ const Header = () => {
             <Link
               to="about"
               smooth={true}
-              duration={500}
+              duration={1000}
               className={`${responsiveLinkStyle}`}
               onClick={() => {
                 setIsMenuOpen(false)
@@ -128,7 +129,7 @@ const Header = () => {
           </li>
 
           <div
-            className="flex justify-center my-2 absolute bottom-16"
+            className="flex justify-center my-12"
             onClick={() => {
               setIsMenuOpen(false)
             }}
