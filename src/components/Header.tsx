@@ -1,11 +1,13 @@
 // import React from "react"
 import { FaBars } from "react-icons/fa6"
 import { IoCloseOutline } from "react-icons/io5"
-// import { Link } from "react-scroll"
 import { Link } from "react-scroll"
 import LoginButton from "./LoginButton"
 import { useEffect, useState } from "react"
 import Icon from "./Icon"
+import { FaRegEnvelope } from "react-icons/fa"
+import { FiPhone } from "react-icons/fi"
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"
 
 const Header = ({ isAtLoginPage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -73,7 +75,7 @@ const Header = ({ isAtLoginPage }) => {
         <ul
           className={` ${
             isMenuOpen ? "translate-x-[0%]" : "translate-x-[100%]"
-          } fixed top-0 right-0 w-[50%] max-w-[350px] h-full bg-black/50 flex md:hidden duration-700 flex-col items-center text-sm pt-20`}
+          } fixed top-0 right-0 w-fit min-w-[50%] max-w-[400px] h-full bg-black/50 flex md:hidden duration-700 flex-col items-center text-sm px-3 pt-20`}
         >
           <IoCloseOutline
             className={`${
@@ -129,12 +131,38 @@ const Header = ({ isAtLoginPage }) => {
           </li>
 
           <div
-            className="flex justify-center my-12"
+            className="flex justify-center my-8"
             onClick={() => {
               setIsMenuOpen(false)
             }}
           >
             <LoginButton />
+          </div>
+
+          <div className="flex flex-col items-start">
+            <div className="flex items-center gap-3">
+              <div className="bg-[#060b2e] rounded-full p-3 my-2">
+                <FaRegEnvelope className="text-xl text-white" />
+              </div>
+              <p className="text-white">
+                <span className="font-semibold">Email:</span> example@email.com
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="bg-[#060b2e] rounded-full p-3 my-2">
+                <FiPhone className="text-xl text-white" />
+              </div>
+              <p className="text-white">
+                <span className="font-semibold">Phone:</span> +1234567890
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-2 my-10">
+            <FaFacebookF className="text-white text-xl" />
+            <FaTwitter className="text-white text-xl" />
+            <FaInstagram className="text-white text-xl" />
+            <FaLinkedin className="text-white text-xl" />
           </div>
         </ul>
       </nav>
