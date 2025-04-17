@@ -11,7 +11,7 @@ const Pricing = () => {
 
   return (
     <section id="pricing">
-      <div className="bg-[#060b2e] px-10 py-3">
+      <div className="bg-[#060b2e] pt-10 py-3">
         <Header isAtLoginPage={isAtLoginPage} />
       </div>
 
@@ -95,6 +95,79 @@ const Pricing = () => {
           </ul>
           <button className={`${buttonStyle} my-3`}>Contact Sales</button>
         </article>
+      </div>
+
+      <div className="p-10">
+        <table className="w-full border-collapse border border-[#060b2e] rounded-lg">
+          <thead>
+            <tr>
+              <th className="border border-[#060b2e] p-2">Features</th>
+              <th className="border border-[#060b2e] p-2">Goal Tracking</th>
+              <th className="border border-[#060b2e] p-2">
+                Progress Monitoring
+              </th>
+              <th className="border border-[#060b2e] p-2">First Steps</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-[#060b2e] text-center p-2">
+                Goal Tracking
+              </td>
+              <td className="border border-[#060b2e] text-center p-2">
+                <TiTick className="text-green-500 text-2xl" />
+              </td>
+              <td className="border border-[#060b2e] text-center p-2">
+                <TiTick className="text-green-500 text-2xl" />
+              </td>
+              <td className="border border-[#060b2e] text-center p-2">
+                <TiTick className="text-green-500 text-2xl" />
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-[#060b2e] text-center p-2">
+                Progress Monitoring
+              </td>
+              <td className="border border-[#060b2e] text-center p-2">
+                <TiTick className="text-green-500 text-2xl" />
+              </td>
+              <td className="border border-[#060b2e] text-center p-2">
+                <TiTick className="text-green-500 text-2xl" />
+              </td>
+              <td className="border border-[#060b2e] text-center p-2">
+                <TiTick className="text-green-500 text-2xl" />
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-[#060b2e] text-center p-2">
+                Team Management
+              </td>
+              <td className="border border-[#060b2e] text-center p-2">
+                <TiTick className="text-green-500 text-2xl" />
+              </td>
+              <td className="border border-[#060b2e] text-center p-2">
+                <TiTick className="text-green-500 text-2xl" />
+              </td>
+              <td className="border border-[#060b2e] text-center p-2">
+                <TiTick className="text-green-500 text-2xl" />
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-[#060b2e] text-center p-2">
+                Dedicated support
+              </td>
+              <td className="border border-[#060b2e] text-center p-2">
+                <TiTick className="text-green-500 text-2xl" />
+              </td>
+              <td className="border border-[#060b2e] text-center p-2">
+                <TiTick className="text-green-500 text-2xl" />
+              </td>
+              <td className="border border-[#060b2e] text-center p-2">
+                <TiTick className="text-green-500 text-2xl" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <Footer />
