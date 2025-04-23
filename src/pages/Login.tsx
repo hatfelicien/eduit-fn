@@ -1,4 +1,4 @@
-// import React from "react"
+import React from "react"
 import Header from "../components/Header"
 import Img from "../assets/Images/Login-page-img.png"
 import Footer from "../components/Footer"
@@ -6,8 +6,8 @@ import { useState } from "react"
 import BackToTop from "../components/BackToTop"
 import { Link } from "react-router-dom"
 
-const Login = () => {
-  const [isAtLoginPage, setIsAtLoginPage] = useState(true)
+const Login: React.FC = () => {
+  const [isAtLoginPage, setIsAtLoginPage] = useState<boolean>(true)
 
   return (
     <main>

@@ -5,8 +5,8 @@ import Footer from "../components/Footer"
 import BackToTop from "../components/BackToTop"
 import { Link } from "react-router-dom"
 
-const Register = () => {
-  const [isAtLoginPage, setIsAtLoginPage] = useState(true)
+const Register: React.FC = () => {
+  const [isAtLoginPage, setIsAtLoginPage] = useState<boolean>(true)
   return (
     <main>
       <div className="px-10 pb-5 pt-1 bg-[#161a35] text-white">
