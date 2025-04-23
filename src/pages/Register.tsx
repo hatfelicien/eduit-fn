@@ -5,8 +5,8 @@ import Footer from "../components/Footer"
 import BackToTop from "../components/BackToTop"
 import { Link } from "react-router-dom"
 
-const Register = () => {
-  const [isAtLoginPage, setIsAtLoginPage] = useState(true)
+const Register: React.FC = () => {
+  const [isAtLoginPage, setIsAtLoginPage] = useState<boolean>(true)
   return (
     <main>
       <div className="px-10 pb-5 pt-1 bg-[#161a35] text-white">
@@ -82,9 +82,9 @@ const Register = () => {
                 Continue
               </button>
             </div>
-            <p className="text-md font-bold capitalize my-5 text-center cursor-pointer">
+            <p className="text-md font-bold capitalize my-5 text-center">
               Looking to login into your organization instead? {"  "}
-              <Link to="/login" className="underline">
+              <Link to="/login" className="underline cursor-pointer">
                 Login to your organization
               </Link>
             </p>

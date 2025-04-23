@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { FaArrowUp } from "react-icons/fa"
 import { animateScroll as scroll } from "react-scroll"
 
-const BackToTop = () => {
+const BackToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
