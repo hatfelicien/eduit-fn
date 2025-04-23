@@ -82,9 +82,9 @@ const Register = () => {
                 Continue
               </button>
             </div>
-            <p className="text-md font-bold capitalize my-5 text-center cursor-pointer">
+            <p className="text-md font-bold capitalize my-5 text-center">
               Looking to login into your organization instead? {"  "}
-              <Link to="/login" className="underline">
+              <Link to="/login" className="underline cursor-pointer">
                 Login to your organization
               </Link>
             </p>

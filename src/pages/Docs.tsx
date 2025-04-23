@@ -44,7 +44,7 @@ const Documentation = () => {
         </div>
 
         <section className="flex flex-col md:flex-row h-[500px] relative">
-          <article className="bg-red-200 flex-1 absolute top-0 bottom-0 left-0 w-1/4">
+          <article className="flex-1 absolute top-0 bottom-0 left-0 w-1/4">
             <ul>
               <li>Getting started</li>
               <li>Managing organizations</li>
@@ -54,7 +54,7 @@ const Documentation = () => {
               <li>API Reference</li>
             </ul>
           </article>
-          <article className="bg-blue-200 flex-3 absolute top-0 bottom-0 right-0 w-3/4 overflow-scroll">
+          <article className="flex-3 absolute top-0 bottom-0 right-0 w-3/4 overflow-scroll">
             <GettingStarted />
             <ManagingOrganizations />
           </article>

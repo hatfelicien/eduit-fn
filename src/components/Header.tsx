@@ -1,15 +1,21 @@
 // import React from "react"
 import { FaBars } from "react-icons/fa6"
 import { IoCloseOutline } from "react-icons/io5"
-import { Link } from "react-scroll"
+import { Link } from "react-router-dom"
 import LoginButton from "./LoginButton"
 import { useEffect, useState } from "react"
 import Icon from "./Icon"
 import { FaRegEnvelope } from "react-icons/fa"
 import { FiPhone } from "react-icons/fi"
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"
+import AboutLink from "./links/AboutLink"
 
-const Header = ({ isAtLoginPage }) => {
+interface HeaderProps {
+  isAtLoginPage?: boolean
+  isAtHomePage?: boolean
+}
+
+const Header: React.FC<HeaderProps> = ({ isAtLoginPage, isAtHomePage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
@@ -37,24 +43,18 @@ const Header = ({ isAtLoginPage }) => {
 
           <ul className="hidden md:flex items-center justify-center gap-5 text-sm">
             <li className={`${linkStyle}`}>
-              <Link to="home" smooth={true} duration={500}>
-                Home
-              </Link>
+              <Link to="/">Home</Link>
+            </li>
+            {isAtHomePage && (
+              <li className={`${linkStyle}`}>
+                <AboutLink />
+              </li>
+            )}
+            <li className={`${linkStyle}`}>
+              <Link to="/docs">Docs</Link>
             </li>
             <li className={`${linkStyle}`}>
-              <Link to="about" smooth={true} duration={1000}>
-                About
-              </Link>
-            </li>
-            <li className={`${linkStyle}`}>
-              <Link to="about" smooth={true} duration={500}>
-                Docs
-              </Link>
-            </li>
-            <li className={`${linkStyle}`}>
-              <Link to="about" smooth={true} duration={500}>
-                Pricing
-              </Link>
+              <Link to="/pricing">Pricing</Link>
             </li>
           </ul>
 
@@ -87,45 +87,29 @@ const Header = ({ isAtLoginPage }) => {
           />
 
           <li className={`${responsiveLiStyle}`}>
-            <Link
-              to="home"
-              smooth={true}
-              duration={500}
-              className={`${responsiveLinkStyle}`}
-            >
+            <Link to="/" className={`${responsiveLinkStyle}`}>
               Home
             </Link>
           </li>
+          {isAtHomePage && (
+            <li className={`${responsiveLiStyle}`}>
+              <span
+                className={`${responsiveLinkStyle}`}
+                onClick={() => {
+                  setIsMenuOpen(false)
+                }}
+              >
+                <AboutLink />
+              </span>
+            </li>
+          )}
           <li className={`${responsiveLiStyle}`}>
-            <Link
-              to="about"
-              smooth={true}
-              duration={1000}
-              className={`${responsiveLinkStyle}`}
-              onClick={() => {
-                setIsMenuOpen(false)
-              }}
-            >
-              About
-            </Link>
-          </li>
-          <li className={`${responsiveLiStyle}`}>
-            <Link
-              to="about"
-              smooth={true}
-              duration={500}
-              className={`${responsiveLinkStyle}`}
-            >
+            <Link to="/docs" className={`${responsiveLinkStyle}`}>
               Docs
             </Link>
           </li>
           <li className={`${responsiveLiStyle}`}>
-            <Link
-              to="about"
-              smooth={true}
-              duration={500}
-              className={`${responsiveLinkStyle}`}
-            >
+            <Link to="/pricing" className={`${responsiveLinkStyle}`}>
               Pricing
             </Link>
           </li>

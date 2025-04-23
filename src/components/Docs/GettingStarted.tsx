@@ -8,7 +8,7 @@ const GettingStarted = () => {
       <div className="flex gap-3">
         <aside>
           <p>Install EduIT</p>
-          <div className="bg-blue-50 p-3">
+          <div className="bg-blue-50/50 p-3">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Voluptatibus expedita itaque optio ipsa nostrum quod maxime
@@ -19,7 +19,7 @@ const GettingStarted = () => {
         </aside>
         <aside>
           <p>Install to your local</p>
-          <div className="bg-blue-50 p-3">
+          <div className="bg-blue-50/50 p-3">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Voluptatibus expedita itaque optio ipsa nostrum quod maxime

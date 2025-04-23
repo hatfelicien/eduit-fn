@@ -11,7 +11,7 @@ const Pricing = () => {
 
   return (
     <section id="pricing">
-      <div className="bg-[#060b2e] pt-10 py-3">
+      <div className="bg-[#060b2e] px-10 py-3">
         <Header isAtLoginPage={isAtLoginPage} />
       </div>
 

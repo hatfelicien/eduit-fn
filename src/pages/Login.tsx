@@ -45,9 +45,9 @@ const Login = () => {
                 Continue
               </button>
             </div>
-            <p className="text-md font-bold capitalize my-5 text-center cursor-pointer">
+            <p className="text-md font-bold capitalize my-5 text-center">
               Looking to register an organization instead? {"  "}
-              <Link to="/register" className="underline">
+              <Link to="/register" className="underline cursor-pointer">
                 Register a new organization
               </Link>
             </p>
